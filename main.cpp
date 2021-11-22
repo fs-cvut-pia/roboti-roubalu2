@@ -2,7 +2,7 @@
 #include "Bludiste.h"
 
 // include na hlavicku vasi tridy
-#include "VasRobot.h" 
+#include "MazeSolver.h" 
 
 #include <string>
 #include <sstream>
@@ -76,7 +76,7 @@ int main() {
     
     //ukoly.push_back(Problem{"Prazdny1",Bludiste(20,30,{15,27}),BludisteOdkryte(20,30,{15,27})});
     
-    Prohledavac* robot = new VasRobot(); // tady doplnite konstruktor tridy vaseho robota
+    Prohledavac* robot = new MazeSolver(); // tady doplnite konstruktor tridy vaseho robota
     
     for (auto & ukol : ukoly) {
         std::cout << "Prohledavam bludiste " << ukol.nazev << ": \n";
