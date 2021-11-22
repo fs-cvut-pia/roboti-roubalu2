@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class MazeSolver : Prohledavac
+class MazeSolver : public Prohledavac
 {
 public:
     MazeSolver();
@@ -18,8 +18,12 @@ public:
     std::string jmeno();
 
 private:
-    bool _krok(Bludiste & map, int deep);
+    void _krok(Bludiste & map, int deep);
     bool _stepRight(Bludiste & map);
+    bool _stepLeft(Bludiste & map);
+    bool _stepFront(Bludiste & map);
+    void _turnRight();
+    void _turnLeft();
     Souradnice s;
     int direction;
 
